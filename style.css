@@ -1,0 +1,130 @@
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8b5cf6; /* Cor de fundo roxa da imagem */
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Header com a imagem/logo */
+#logo {
+    margin-bottom: 20px;
+}
+
+#logo img {
+    width: 150px; /* Ajuste conforme necessário */
+}
+
+/* Container principal (o retângulo branco) */
+main {
+    background-color: #f3f4f6; /* Fundo cinza bem claro */
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização dos elementos dentro do container */
+main > section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label, p {
+    font-weight: 700;
+    color: #374151;
+}
+
+select, input {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+}
+
+select:focus, input:focus {
+    border-color: #8b5cf6;
+}
+
+button {
+    background-color: #4c1d95; /* Roxo escuro do botão */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #2e1065;
+}
+
+/* Área de resultado atualizada */
+#resultado-area {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-top: 2px solid #e5e7eb;
+    padding-top: 20px;
+}
+
+/* Caixa de cada moeda dentro do resultado */
+#resultado-area > section {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Tamanho das bandeiras */
+#resultado-area img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* Seta entre os blocos de resultado */
+#resultado-area > img {
+    width: 24px;
+    height: 24px;
+    border-radius: 0;
+}
+
+/* Estilização dos textos informativos de conversão */
+#resultado-area section p:nth-of-type(1) {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+#resultado-area section p:nth-of-type(2) {
+    font-size: 20px;
+    color: #1f2937;
+    font-weight: 700;
+}
