@@ -8,6 +8,9 @@ function convertValue() {
 
     const dolarValue = 5.21
     const libravalue = 7.01
+    const eurovalue = 6
+    const chinavalue = 0.76
+    const japvalue = 0.032
 
     currencytoConverter.innerHTML = new Intl.NumberFormat("pt-br", {
         style: "currency",
@@ -28,6 +31,27 @@ function convertValue() {
             currency: "GBP"
         }).format(inputCureeencyValue / libravalue)
     }
+
+    if (chosencoin.value == "euro") {
+        currencyConverted.innerHTML = new Intl.NumberFormat("pt-br", {
+            style: "currency",
+            currency: "EUR"
+        }).format(inputCureeencyValue / eurovalue)
+    }
+
+    if (chosencoin.value == "jap") {
+        currencyConverted.innerHTML = new Intl.NumberFormat("pt-br", {
+            style: "currency",
+            currency: "JPY"
+        }).format(inputCureeencyValue / japvalue)
+    }
+
+    if (chosencoin.value == "chi") {
+        currencyConverted.innerHTML = new Intl.NumberFormat("pt-br", {
+            style: "currency",
+            currency: "CNY"
+        }).format(inputCureeencyValue / chinavalue)
+    }
 }
 
 function convertformat() {
@@ -44,6 +68,20 @@ function convertformat() {
         imgcoin.src = "./assets/LIBRA.png"
     }
 
+    if (chosencoin.value == "euro") {
+        namecoin.innerHTML = "Euro"
+        imgcoin.src = "./assets/Euro.png"
+    }
+
+    if (chosencoin.value == "chi") {
+        namecoin.innerHTML = "Yuan Chinês"
+        imgcoin.src = "./assets/China.webp"
+    }
+
+    if (chosencoin.value == "jap") {
+        namecoin.innerHTML = "Iene Japonês"
+        imgcoin.src = "./assets/Japão.jpg"
+    }
     convertValue()
 }
 
